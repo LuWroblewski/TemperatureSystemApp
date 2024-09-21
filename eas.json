@@ -1,0 +1,12 @@
+{
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_URL_API": "https://temperature-monitor-system-luwroblewskis-projects.vercel.app"
+      }
+    }
+  }
+}
