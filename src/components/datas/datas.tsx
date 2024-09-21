@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { Layout, Text } from '@ui-kitten/components';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Entypo from '@expo/vector-icons/Entypo';
+
 type Data = {
   id: number;
   temperature: string;
@@ -37,21 +38,21 @@ export default function Data() {
   }, [URL_API]);
 
   return (
-    <View className=' rounded-lg  space-y-2 my-auto bg-gray-600 h-48 p-4'>
+    <Layout className='rounded-lg space-y-2 my-auto bg-gray-600 h-48 '>
       {dataJson && (
         <>
-          <View className='flex flex-row justify-center items-center space-x-2 my-auto p-2 rounded-lg'>
-            <Text className='text-3xl text-gray-300'>
+          <Layout className='flex flex-row justify-center items-center space-x-2 my-auto p-2 rounded-lg '>
+            <Text className=' text-gray-300 tracking-wider'>
               <FontAwesome size={28} name='thermometer-half' /> Temperatura: {dataJson.temperature}
             </Text>
-          </View>
-          <View className='flex flex-row justify-center items-center space-x-2 my-auto  p-2 rounded-lg'>
-            <Text className='text-3xl text-gray-300'>
+          </Layout>
+          <Layout className='flex flex-row justify-center items-center space-x-2 my-auto p-2 rounded-lg'>
+            <Text className=' text-gray-300'>
               <Entypo size={28} name='water' /> Umidade: {dataJson.humidity}%
             </Text>
-          </View>
+          </Layout>
         </>
       )}
-    </View>
+    </Layout>
   );
 }

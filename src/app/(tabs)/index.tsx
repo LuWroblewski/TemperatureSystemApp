@@ -1,11 +1,11 @@
 import React from 'react';
 import Data from '@/components/datas/datas';
-import { View } from 'react-native';
+import { Layout } from '@ui-kitten/components';
 
 export default function Home() {
   return (
-    <View className='flex-1 bg-gray-800 p-4'>
+    <Layout className='flex-1 bg-gray-800'>
       <Data />
-    </View>
+    </Layout>
   );
 }
